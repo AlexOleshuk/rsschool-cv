@@ -37,4 +37,5 @@ console.log(sum);
  - [Codewars](https://www.codewars.com/)
 
 ## __Foreign languages__ 
+ - Russian - native speaker.
  - English (A2)
