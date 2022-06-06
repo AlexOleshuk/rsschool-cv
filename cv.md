@@ -37,4 +37,4 @@ console.log(sum);
  - [Codewars](https://www.codewars.com/)
 
 ## __Foreign languages__ 
- - English (A1)
+ - English (A2)
