@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;
-    /* margin: 0; */
-    /* padding: 0; */
 }
 
 html {
@@ -16,6 +14,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background-color: #045256;
+}
+
+body._lock {
+    overflow: hidden;
 }
 
 a {
@@ -74,31 +76,49 @@ li {
     margin: 0 auto;
 }
 
+/*===============burger====================== */
+
+
+
 /*===============navigation====================== */
 
-.nav-item :hover {
-    transition: all .5s;
-    color: #098f96;
+.menu_icon{
+    display: none;
 }
 
-.nav-item:hover {
-    transform: scale(1.08);
+.menu__body{
+    margin: 0 20px 0 20px;
 }
 
-.nav-list {
+.menu__list {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
 }
 
-.nav-link {
-    padding: 0 20px;
-    line-height: 50px;
-    color: #0B1516;
+/* ============================ */
+
+.menu__link:hover {
+    transition: all .5s;
+    color: #098f96;
+}
+
+.menu__link:hover {
+    transform: scale(1.08);
+}
+
+
+
+.menu__link {
+    display: flex; 
+    flex-wrap: wrap; 
+    padding: 20px;
+    line-height: 20px;
+    color: #0B1516; 
     text-decoration: none;
     transition: color 0.5s;
-}
+} 
 
 
 
@@ -204,7 +224,7 @@ li {
 
 .container_footer {
     background-color: #9AB8BA;
-    padding: 15px;
+    padding: 10px;
 }
 
 .section_footer {
@@ -229,14 +249,137 @@ li {
     transform: scale(1.08);
 }
 
+/* ================back_to_top====================== */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  
+  #myBtn:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+
+
 /* ================@media(max-width: 991px)====================== */
 
-
 @media(max-width: 991px) {
+    .menu_icon {
+        z-index: 100;
+        display: block;
+        position: fixed;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        margin: 30px;
+    }
 
-    nav {
-        margin: 10px;
-    } 
+    .menu_icon span,
+    .menu_icon::before,
+    .menu_icon::after {
+        left: 0;    
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all .3s ease 0s;
+        background-color: #fff;
+        border-radius: none;
+    }
+
+    .menu_icon::before,
+    .menu_icon::after{
+        content: "";
+    }
+
+    .menu_icon::before{
+        top: 0;
+    }
+
+    .menu_icon::after{
+        bottom: 0;
+    }
+
+    .menu_icon span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    /*======= x menu  ======*/
+    .menu_icon._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+
+    .menu_icon._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    .menu_icon._active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+
+
+
+    .menu__body {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-radius: 0;
+        box-shadow: none;
+        padding: 100px 30px 30px 30px;
+        margin: 0;
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+        z-index: 20;
+    }
+
+    .menu__body._active {
+        left: 0;
+    }
+
+    .menu__list{
+        display: block;
+    }
+
+    .menu__list > li {
+        list-style: none;
+        margin: 0px 0px 30px 0px;
+    }
+
+    .menu__list > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu__link{    
+        color: #fff;
+        padding: 0;
+    }
+
+
+
+    .section_title_name {
+        margin-top: 50px;
+    }
+
+    .section_title {
+        margin: 0;
+    }
 
     .content_nav {
         flex-wrap: wrap;
@@ -244,11 +387,6 @@ li {
         width: 100%;
     }
 
-    .nav-list {
-        flex-wrap: wrap;
-        overflow: auto;
-        width: 100%;
-    }
     .container_block_profile {
         margin: 0 auto;
         padding: 20px 0 40px 0;
@@ -298,7 +436,7 @@ li {
 
 @media(max-width: 450px){
     body {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 
     a p h1{
@@ -308,9 +446,6 @@ li {
         font-size: 1em;
     }
 
-    nav {
-        margin: 20px;
-    }
 
     .foto{
         width: 10rem;
@@ -322,13 +457,16 @@ li {
         padding: 20px;
     }
 
-    .nav-list {
-        margin: 0;
-        padding: 0;
-    }
-
     .content_nav {
         padding: 20px;
+    }
+
+    .section_title_name {
+        margin-top: 50px;
+    }
+
+    .section_title {
+        margin: 0;
     }
 
     .section_profile {
