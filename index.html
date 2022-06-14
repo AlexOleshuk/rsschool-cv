@@ -1,13 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="icon" href="assets/icon/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pushster:wght@400&display=swap" rel="stylesheet">
+    <title>Alexander Oleshuk | CV</title>
 </head>
+
 <body>
-    <h1>Alexander Oleshuk</h1>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+                    <li class="nav-item"><a href="#about_me" class="nav-link">About Me</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#code_example" class="nav-link">Code Example</a></li>
+                    <li class="nav-item"><a href="#courses" class="nav-link">Courses</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#foreign_languages" class="nav-link">Foreign languages</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="container_block_profile">
+                <section class="section_profile" id="profile">
+                    <h1 class="section_title">Alexander Oleshuk</h1>
+                    <h2>Junior Front-End Developer</h2>
+                </section>
+                <div class="section_foto">
+                    <img class="foto" src="assets/img/face.jpg" alt="My photo">
+                </div>
+            </div>
+            <div class="container_block">
+                <section class="section" id="contacts">
+                    <h2 class="section_title">Contacts</h2>
+                    <ul class="content_nav">
+                        <li><span>Location:</span>Grodno, Belarus</li>
+                        <li><span>Phone:</span><a target="_blank" href="tel:+375259899648">+375 25 989-96-48</a></li>
+                        <li><span>Telegram:</span><a target="_blank"
+                                href="https://tlgg.ru/@AlexOleshuk">@AlexOleshuk</a></li>
+                        <li><span>Instagram:</span><a target="_blank"
+                                href="https://www.instagram.com/alex.oleshuk/">@alex.oleshuk</a></li>
+                        <li><span>Email:</span><a target="_blank"
+                                href="mailto:alex.oleshuk.92@gmail.com">alex.oleshuk.92@gmail.com</a></li>
+                        <li><span>GitHub:</span><a target="_blank"
+                                href="https://github.com/AlexOleshuk">@AlexOleshuk</a></li>
+                    </ul>
+                </section>
+                <section class="section_1" id="about_me">
+                    <h2 class="section_title">About Me</h2>
+                    <p>Hi, I want to become a programmer.
+                        I like to study and learn something new.
+                        I love cycling and mountain skiing.</p>
+                    <p>
+                        I want to be useful and help people.
+                        I really like to travel and see new countries.
+                        I want to become Middle Frontend developer and work abroad!
+                    </p>
+                </section>
+            </div>
+            <div class="container_block">
+                <section class="section_1" id="skills">
+                    <h2 class="section_title">Skills</h2>
+                    <ul>
+                        <li>HTML 5</li>
+                        <li>CSS 3</li>
+                        <li>JavaScript</li>
+                        <li>React (in process…)</li>
+                        <li>Git</li>
+                        <li>Sass</li>
+                    </ul>
+                </section>
+                <section class="section" id="code_example">
+                    <h2 class="section_title">Code Example</h2>
+                    <b>
+                        <code class="example_code">
+                            function highAndLow(numbers){<br>
+                            let nums = numbers.split(" ");<br>
+                            return `${Math.max(...nums)} ${Math.min(...nums)}`;<br>
+                            }<br>
+                            <br>
+
+                        </code>
+                    </b>
+                </section>
+
+            </div>
+            <div class="container_block">
+                <section class="section" id="courses">
+                    <h2 class="section_title">Courses</h2>
+                    <ul>
+
+                        <li><a target="_blank" href="https://instagram.com/redev_courses?utm_medium=copy_link">REDEV
+                                Courses</a>
+                        </li>
+                        <li><a target="_blank"
+                                href="https://www.youtube.com/playlist?list=PLawfWYMUziZqyUL5QDLVbe3j5BKWj42E5">CS50
+                                Courses</a></li>
+                        <li><a target="_blank" href="https://www.freecodecamp.org/learn/">freeCodeCamp</a></li>
+                        <li><a target="_blank" href="https://www.codewars.com/">Codewars</a></li>
+
+                    </ul>
+                </section>
+                <section class="section_1" id="projects">
+                    <h2 class="section_title">Projects</h2>
+                    <ul>
+                        <li><a target="_blank" href="https://dev4med.com/">Dev4Med</a></li>
+                        <li><a target="_blank" href="https://abuzerje.by/">Abuzerje</a></li>
+                        <li><a target="_blank" href="https://dezexpert.by/">DezExpert</a></li>
+
+                    </ul>
+                </section>
+            </div>
+            <div class="container_block">
+                <section class="section_1" id="education">
+                    <h2 class="section_title">Education</h2>
+                    <ul>
+                        <li>University: International University MITSO, jurist</li>
+                    </ul>
+                </section>
+                <section class="section" id="foreign_languages">
+                    <h2 class="section_title">Foreign languages</h2>
+                    <ul>
+                        <li>Russian- native speaker.</li>
+                        <li>English - A1 (A2 in process…)</li>
+                        <li>Deutsch - A1</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="container_footer">
+                <section class="section_footer">
+                    <!-- <h2></h2> -->
+                    <h4 class="footer_title">"© 2022 "AlexOleshuk" "</h4>
+                    <div class="footer_dez"><a class="github" target="_blank"
+                            href="https://github.com/AlexOleshuk">GitHub</a></div>
+                    <div class="footer_dez"><a class="github" target="_blank" href="https://rs.school/js/">
+                            <img height="30" src="assets/icon/rs_school_js.ico" alt="rsschool"></a></div>
+                </section>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
