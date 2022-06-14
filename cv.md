@@ -19,6 +19,7 @@ I want to be useful and help people. I really like to travel and see new countri
 - React (in process…)
 - Git
 - Sass
+
 ## __Code Example__
 ```
 function highAndLow(numbers){
